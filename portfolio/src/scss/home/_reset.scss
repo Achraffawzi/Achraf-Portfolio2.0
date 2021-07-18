@@ -1,0 +1,43 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: $pinkish-color;
+  color: #fff;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+body {
+  background: linear-gradient(to right, $lighter-bg, $darker-bg);
+  padding: 20px;
+  overflow-x: hidden;
+  color: $white-color;
+}
