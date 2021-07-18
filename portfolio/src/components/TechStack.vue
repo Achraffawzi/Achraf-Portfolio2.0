@@ -2,7 +2,7 @@
   <div class="tech-stack" id="tech-stack">
     <h2 class="stack__heading text-uppercase">tech stack</h2>
     <div class="container stack__icons text-center">
-      <div class="row">
+      <div class="row just-content-center flex-wrap">
         <div class="icons__col col-sm-6 col-md-4 col-lg-3 col-xl-1">
           <i class="devicon-html5-plain-wordmark"></i>
         </div>
