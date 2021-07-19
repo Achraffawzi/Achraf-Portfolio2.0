@@ -1,5 +1,5 @@
 <template>
-  <div class="contact" id="contact">
+  <div class="contact mt-5" id="contact">
     <h2 class="contact__heading text-uppercase">Contact</h2>
     <p class="contact__intro">
       If you like my work, and have a business idea, don’t hesitate to contact
