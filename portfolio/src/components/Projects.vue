@@ -2,45 +2,50 @@
   <div class="projects" id="projects">
     <h2 class="projects__heading text-uppercase">Projects</h2>
     <div v-if="projects.length > 0" class="mt-5">
-    <div class="carousel-div" v-if="dataLoaded">
-       <carousel
-         v-if="dataLoaded"
-        :items="2"
-        :autoplay="false"
-        :nav="false"
-        :responsive="{
-          0: { items: 1, nav: false },
-          600: { items: 1, nav: false },
-        }"
-      >
-        <a
-          v-for="project in projects"
-          :key="project.title"
-          :href="project.link"
-          target="_blank"
-          class="text-white text-decoration-none row"
+      <div class="carousel-div" v-if="dataLoaded">
+        <carousel
+          v-if="dataLoaded"
+          :items="2"
+          :autoplay="false"
+          :nav="false"
+          :responsive="{
+            0: { items: 1, nav: false },
+            600: { items: 1, nav: false },
+          }"
         >
-          <div class="col-lg-6">
-            <img :src="project.picture" class="img-fluid" data-aos="zoom-in-right" />
-          </div>
-          <div class="col-lg-6">
-            <div>
-              <h3 class="mb-4 projects__title text-uppercase">
-                {{ project.title }}
-              </h3>
-              <p class="mb-5 projects__desc">{{ project.description }}</p>
-              <p class="projects__technologies text-uppercase">
-                <span class="d-block mb-2">technologies used :</span>
-                <i
-                  v-for="technology in project.technologies"
-                  :key="technology"
-                  :class="technology"
-                ></i>
-              </p>
+          <a
+            v-for="project in projects"
+            :key="project.title"
+            :href="project.link"
+            target="_blank"
+            class="text-white text-decoration-none row"
+          >
+            <div class="col-lg-6 image-col">
+              <img
+                :src="project.picture"
+                class="img-fluid project-image"
+                data-aos="zoom-in-right"
+                style="width: 300px; height: 500px;"
+              />
             </div>
-          </div>
-        </a>
-      </carousel>
+            <div class="col-lg-6">
+              <div>
+                <h3 class="mb-4 projects__title text-uppercase">
+                  {{ project.title }}
+                </h3>
+                <p class="mb-5 projects__desc">{{ project.description }}</p>
+                <p class="projects__technologies text-uppercase">
+                  <span class="d-block mb-2">technologies used :</span>
+                  <i
+                    v-for="technology in project.technologies"
+                    :key="technology"
+                    :class="technology"
+                  ></i>
+                </p>
+              </div>
+            </div>
+          </a>
+        </carousel>
       </div>
     </div>
   </div>
@@ -108,4 +113,10 @@ export default {
     }
   }
 }
+
+.image-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 </style>

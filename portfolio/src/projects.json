@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "picture": "/assets/pnghireme.png",
+            "picture": "/assets/hiremepage.png",
             "title": "HireMe",
             "description": "HireMe a job searching website where you can find thousands of job offers all over the world to increase your chances to find the most suitable job for you and help you get your life to the next level",
             "technologies": [
@@ -16,13 +16,14 @@
             "link": "https://github.com/Achraffawzi/JobPostingProject.git"
         },
         {
-            "picture": "/assets/portfolio2.0.png",
+            "picture": "/assets/hireme.png",
             "title": "Personal Portfolio",
             "description": "This is my personal portfolio project where I share information about me and the projects I built for my business and for clients as well",
             "technologies": [
                 "devicon-html5-plain-wordmark",
                 "devicon-css3-plain-wordmark",
                 "devicon-bootstrap-plain-wordmark",
+                "devicon-javascript-plain",
                 "devicon-vuejs-plain-wordmark"
             ],
             "link": "https://github.com/Achraffawzi/Achraf-Portfolio2.0.git"

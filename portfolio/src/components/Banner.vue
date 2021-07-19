@@ -1,7 +1,13 @@
 <template>
   <div class="banner" id="banner">
+    <vue-particles
+        color="#dedede"
+        :particlesNumber="150"
+        class="intro"
+      ></vue-particles>
     <!-- links -->
-    <ul class="d-flex align-items-center list-unstyled">
+    <input type="checkbox" id="nav-toggle">
+    <ul class="banner__ul d-flex align-items-center list-unstyled">
       <li>
         <a href="#banner" class="banner__anchor text-uppercase active ml-0"
           >home</a
@@ -22,6 +28,11 @@
         <a href="#contact" class="banner__anchor text-uppercase">contact</a>
       </li>
     </ul>
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>    
     <!-- profile picture -->
     <img
       src="../assets/me-black-bg.png"
@@ -59,46 +70,12 @@
         <i class="fab fa-instagram"></i>
       </a>
     </div>
-    <!-- The intro slideshow -->
-    <div class="intro">
-      <div class="intro-text">
-        <div class="hide">
-          <span class="text">Welcome everyone to</span>
-        </div>
-        <div class="hide">
-          <span class="text">Achraf FAWZI's</span>
-        </div>
-        <div class="hide">
-          <span class="text">Portfolio</span>
-        </div>
-      </div>
-      <vue-particles
-        color="#dedede"
-        :particlesNumber="170"
-        class="intro"
-      ></vue-particles>
-    </div>
-    <div class="slider"></div>
   </div>
 </template>
 
 <script>
-import gsap from "gsap";
-// import particlesJS from "particles.js";
 export default {
   name: "Banner",
-  mounted() {
-    // particleJS
-    // particlesJS.load('particles-js', '../particlesjs-config.json');
-
-    // GSAP Animation
-    const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-    tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
-    tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
-    tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
-    tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
-    tl.fromTo(".big-text", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-  },
 };
 </script>
 
@@ -108,9 +85,8 @@ export default {
   min-height: 100vh;
   position: relative;
 
-  // Gsap animation
   .intro {
-    // background: $lighter-bg;
+    background: transparent;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -119,39 +95,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    &-text {
-      font-size: 3rem;
-      font-weight: 600;
-      font-weight: bold;
-      letter-spacing: 4px;
-    }
-
-    .hide {
-      background-color: transparent;
-      overflow: hidden;
-    }
-
-    .hide span {
-      display: inline-block;
-      transform: translateY(100%);
-    }
-  }
-
-  .slider {
-    background-color: $pinkish-color;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    transform: translateY(100%);
+    z-index: -99999;
   }
 
   &:after {
@@ -163,7 +107,7 @@ export default {
     position: absolute;
     right: -104px;
     top: -134px;
-    z-index: -9999;
+    z-index: -99;
     box-shadow: -29px 0 29px 1px #404349;
   }
 
@@ -176,7 +120,30 @@ export default {
     position: absolute;
     right: 400px;
     top: 400px;
-    z-index: -9999;
+    z-index: -99;
+  }
+
+  #nav-toggle {
+    position: absolute;
+    top: -900px;
+  }
+
+  // navbar toggle
+  .icon-burger {
+    display: none;
+    position: fixed;
+    right: 2%;
+    top: 3%;
+    z-index: 99;
+    cursor: pointer;
+
+    .line {
+      width: 30px;
+      height: 5px;
+      background: #fff;
+      margin: 5px;
+      transition: all .3s ease-in-out;
+    }
   }
 
   // Profile picture
@@ -304,5 +271,46 @@ export default {
       z-index: -9999;
     }
   }
+}
+
+@media screen and (max-width: 500px) {
+  .icon-burger {
+      display: block !important;
+    }
+
+    .banner__ul {
+      // display: none !important;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), #252837);
+      position: fixed;
+      top: 0%;
+      left: 0;
+      right: 0;
+      bottom: 100%;
+      width: auto;
+      height: auto;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      transition: all .5s ease-in-out;
+    }
+
+  :checked ~ .banner__ul {
+    bottom: 0;
+  }
+
+  :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	:checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	:checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+
 }
 </style>
