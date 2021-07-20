@@ -1,6 +1,7 @@
 <template>
-  <div class="contact mt-5" id="contact">
-    <h2 class="contact__heading text-uppercase">Contact</h2>
+  <div class="contact mt-5c" id="contact">
+    <div class="container">
+      <h2 class="contact__heading text-uppercase">Contact</h2>
     <p class="contact__intro">
       If you like my work, and have a business idea, don’t hesitate to contact
       me! let’s take your business to the next level.
@@ -63,6 +64,7 @@
       </div>
       <input type="submit" class="button-send my-4" value="Send" />
     </form>
+    </div>
   </div>
 </template>
 

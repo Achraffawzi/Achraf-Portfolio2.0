@@ -1,17 +1,16 @@
 <template>
   <div class="banner" id="banner">
-    <vue-particles
+    <div class="container">
+      <vue-particles
         color="#dedede"
-        :particlesNumber="150"
+        :particlesNumber="80"
         class="intro"
       ></vue-particles>
     <!-- links -->
     <input type="checkbox" id="nav-toggle">
-    <ul class="banner__ul d-flex align-items-center list-unstyled">
+    <ul class="banner__ul mt-3 d-flex align-items-center list-unstyled">
       <li>
-        <a href="#banner" class="banner__anchor text-uppercase active ml-0"
-          >home</a
-        >
+        <a href="#banner" class="banner__anchor text-uppercase active ml-0">home</a>
       </li>
       <li>
         <a href="#about" class="banner__anchor text-uppercase">about</a>
@@ -70,6 +69,7 @@
         <i class="fab fa-instagram"></i>
       </a>
     </div>
+    </div>
   </div>
 </template>
 
@@ -84,6 +84,7 @@ export default {
 .banner {
   min-height: 100vh;
   position: relative;
+  overflow: hidden;
 
   .intro {
     background: transparent;

@@ -1,6 +1,7 @@
 <template>
   <div class="about" id="about">
-    <h2 class="about__heading text-uppercase">about</h2>
+    <div class="container">
+      <h2 class="about__heading text-uppercase">about</h2>
     <p class="about__content">
       Web development has been my passion ever since I discovered it for the
       first time. As this passion grows, I started learning and getting in depth
@@ -12,6 +13,7 @@
       href="https://drive.google.com/uc?export=download&id=1ZhhhpU2x5N2r9NNr2CpzTxOf5UBdBsGZ"
       >download CV</a
     >
+    </div>
   </div>
 </template>
 

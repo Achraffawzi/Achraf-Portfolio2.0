@@ -1,6 +1,7 @@
 <template>
   <div class="tech-stack" id="tech-stack">
-    <h2 class="stack__heading text-uppercase">tech stack</h2>
+    <div class="container">
+      <h2 class="stack__heading text-uppercase">tech stack</h2>
     <div class="container stack__icons text-center">
       <div class="row justify-content-center flex-wrap">
         <div class="icons__col col-sm-6 col-md-4 col-lg-3 col-xl-1">
@@ -37,6 +38,7 @@
           <i class="devicon-github-original-wordmark"></i>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>

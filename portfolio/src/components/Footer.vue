@@ -1,6 +1,7 @@
 <template>
-  <div class="footer">
-    <!-- Social media -->
+  <div class="footer text-center mb-2">
+    <div class="container">
+      <!-- Social media -->
     <div class="footer__socialMedia">
       <a
         href="https://www.linkedin.com/in/achraf-fawzi-dev/"
@@ -31,6 +32,7 @@
       >
       &copy; {{ getCopyrightsDate }}
     </p>
+    </div>
   </div>
 </template>
 

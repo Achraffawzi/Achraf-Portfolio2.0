@@ -1,6 +1,7 @@
 <template>
   <div class="projects" id="projects">
-    <h2 class="projects__heading text-uppercase">Projects</h2>
+    <div class="container">
+      <h2 class="projects__heading text-uppercase">Projects</h2>
     <div v-if="projects.length > 0" class="mt-5">
       <div class="carousel-div" v-if="dataLoaded">
         <carousel
@@ -47,6 +48,7 @@
           </a>
         </carousel>
       </div>
+    </div>
     </div>
   </div>
 </template>
