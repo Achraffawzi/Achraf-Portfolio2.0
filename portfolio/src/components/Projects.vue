@@ -79,7 +79,7 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/home/variables.scss";
 .projects {
-  margin-top: 150px;
+  margin-top: 100px;
 
   .projects__heading {
     position: relative;

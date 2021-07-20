@@ -77,6 +77,8 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/home/variables.scss";
 .contact {
+  margin-top: 100px;
+
   .contact__heading {
     position: relative;
     font-size: 25px;
@@ -119,7 +121,7 @@ export default {
 
   input,
   textarea {
-    background-color: transparent;
+        background: rgba(37, 40, 55, 0.7);
     border: none;
     border-bottom: 1px solid $white-color;
     padding-left: 0;

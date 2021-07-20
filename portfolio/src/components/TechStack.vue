@@ -52,7 +52,7 @@ export default {
 <style lang="scss" scoped>
 @import "../scss/home/variables.scss";
 .tech-stack {
-  margin-top: 150px;
+  margin-top: 100px;
 
   .stack__heading {
     position: relative;

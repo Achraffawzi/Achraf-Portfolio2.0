@@ -217,9 +217,7 @@ export default {
 
   // Social media
   .banner__socialMedia {
-    position: absolute;
-    bottom: 5%;
-    right: 0;
+    margin-top: 30px;
 
     .socialMedia__anchors {
       font-size: 20px;
