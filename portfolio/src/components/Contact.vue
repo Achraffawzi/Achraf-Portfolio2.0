@@ -18,7 +18,7 @@
       action="https://script.google.com/macros/s/AKfycbxcLSNwKBCcvyeU0Ls2s2Y_e2mo38wDjbqlfFTB-JCjQlLbdwEKaBi6p8NtG3S3F-ze/exec"
     >
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-lg-5">
           <div class="form-group">
             <label for=""></label>
             <input
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-lg-5">
           <div class="form-group">
             <label for=""></label>
             <input
@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-lg-5">
           <div class="form-group">
             <label for=""></label>
             <textarea

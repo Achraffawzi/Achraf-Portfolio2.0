@@ -295,6 +295,7 @@ export default {
       text-align: center;
       overflow: hidden;
       transition: all .5s ease-in-out;
+      margin-top: 0;
     }
 
   :checked ~ .banner__ul {
