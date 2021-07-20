@@ -2,43 +2,18 @@
   <div class="tech-stack" id="tech-stack">
     <div class="container">
       <h2 class="stack__heading text-uppercase">tech stack</h2>
-    <div class="container stack__icons text-center">
-      <div class="row justify-content-center flex-wrap">
-        <div class="icons__col col-sm-6 col-md-4 col-lg-3 col-xl-1">
-          <i class="devicon-html5-plain-wordmark"></i>
-        </div>
-        <div class="icons__col col-sm-6 col-md-4 col-lg-3 col-xl-1">
-          <i class="devicon-css3-plain-wordmark"></i>
-        </div>
-        <div class="icons__col col-sm-6 col-md-4 col-lg-3 col-xl-1">
-          <i class="devicon-bootstrap-plain-wordmark"></i>
-        </div>
-        <div class="icons__col col-sm-6 col-md-4 col-lg-3 col-xl-1">
-          <i class="devicon-sass-original"></i>
-        </div>
-        <div class="icons__col col-sm-6 col-md-4 col-lg-3 col-xl-1">
-          <i class="devicon-javascript-plain"></i>
-        </div>
-        <!--  -->
-        <div class="icons__col col-sm-6 col-md-4 col-lg-3 col-xl-1">
-          <i class="devicon-vuejs-plain-wordmark"></i>
-        </div>
-        <div class="icons__col col-sm-6 col-md-4 col-lg-3 col-xl-1">
-          <i class="devicon-csharp-plain-wordmark"></i>
-        </div>
-        <div
-          class="icons__col col-sm-6 col-md-4 col-lg-3 col-xl-1 col-offset-md-4"
-        >
-          <i class="devicon-microsoftsqlserver-plain-wordmark"></i>
-        </div>
-        <div class="icons__col col-sm-6 col-md-4 col-lg-3 col-xl-1">
-          <i class="devicon-git-plain-wordmark"></i>
-        </div>
-        <div class="icons__col col-sm-6 col-md-4 col-lg-3 col-xl-1">
-          <i class="devicon-github-original-wordmark"></i>
-        </div>
+      <div class="container stack__icons text-center tech-stack-icons-container">
+        <i class="devicon-html5-plain-wordmark"></i>
+        <i class="devicon-css3-plain-wordmark"></i>
+        <i class="devicon-bootstrap-plain-wordmark"></i>
+        <i class="devicon-sass-original"></i>
+        <i class="devicon-javascript-plain"></i>
+        <i class="devicon-vuejs-plain-wordmark"></i>
+        <i class="devicon-csharp-plain-wordmark"></i>
+        <i class="devicon-microsoftsqlserver-plain-wordmark"></i>
+        <i class="devicon-git-plain-wordmark"></i>
+        <i class="devicon-github-original-wordmark"></i>
       </div>
-    </div>
     </div>
   </div>
 </template>
@@ -76,6 +51,12 @@ export default {
       left: 20px;
       background-color: $white-color;
     }
+  }
+
+  .tech-stack-icons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 30px;
   }
 
   .stack__icons {
