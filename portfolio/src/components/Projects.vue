@@ -26,7 +26,6 @@
                 :src="project.picture"
                 class="img-fluid project-image"
                 data-aos="zoom-in-right"
-                style="width: 300px; height: 500px;"
               />
             </div>
             <div class="col-lg-6">

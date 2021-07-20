@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "picture": "/assets/pnghireme.png",
+            "picture": "/assets/hireme.png",
             "title": "HireMe",
             "description": "HireMe a job searching website where you can find thousands of job offers all over the world to increase your chances to find the most suitable job for you and help you get your life to the next level",
             "technologies": [
