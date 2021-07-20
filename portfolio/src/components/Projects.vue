@@ -19,7 +19,7 @@
             :key="project.title"
             :href="project.link"
             target="_blank"
-            class="text-white text-decoration-none row"
+            class="text-white text-decoration-none row row-height"
           >
             <div class="col-lg-6 image-col">
               <img
@@ -115,9 +115,22 @@ export default {
   }
 }
 
+.row-height {
+  height: 247.06px;
+  max-height: 247.06px;
+}
+
 .image-col {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    img {
+      transition: transform 5s linear;
+    }
+
+    img:hover {
+      transform: translateY(calc(247.06px - 100%));
+    }
   }
 </style>
