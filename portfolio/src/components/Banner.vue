@@ -6,69 +6,71 @@
         :particlesNumber="80"
         class="intro"
       ></vue-particles>
-    <!-- links -->
-    <input type="checkbox" id="nav-toggle">
-    <ul class="banner__ul mt-3 d-flex align-items-center list-unstyled">
-      <li>
-        <a href="#banner" class="banner__anchor text-uppercase active ml-0">home</a>
-      </li>
-      <li>
-        <a href="#about" class="banner__anchor text-uppercase">about</a>
-      </li>
-      <li>
-        <a href="#tech-stack" class="banner__anchor text-uppercase"
-          >Tech stack</a
-        >
-      </li>
-      <li>
-        <a href="#projects" class="banner__anchor text-uppercase">projects</a>
-      </li>
-      <li>
-        <a href="#contact" class="banner__anchor text-uppercase">contact</a>
-      </li>
-    </ul>
-    <label for="nav-toggle" class="icon-burger">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </label>    
-    <!-- profile picture -->
-    <img
-      src="../assets/me-black-bg.png"
-      draggable="false"
-      alt="Achraf FAWZI"
-      class="banner__picture"
-    />
-    <!-- intro -->
-    <div class="banner__intro">
-      <div class="intro__name">I'm Achraf FAWZI</div>
-      <div class="intro__title">Web developer</div>
-      <div class="intro__buttons">
-        <a href="#projects" class="intro__viewProjectsBtn">View my work</a>
-        <a href="#contact" class="intro__contactBtn">contact me</a>
+      <!-- links -->
+      <!-- <input type="checkbox" id="nav-toggle"> -->
+      <ul class="banner__ul mt-3 d-flex align-items-center list-unstyled">
+        <li>
+          <a href="#banner" class="banner__anchor text-uppercase active ml-0"
+            >home</a
+          >
+        </li>
+        <li>
+          <a href="#about" class="banner__anchor text-uppercase">about</a>
+        </li>
+        <li>
+          <a href="#tech-stack" class="banner__anchor text-uppercase"
+            >Tech stack</a
+          >
+        </li>
+        <li>
+          <a href="#projects" class="banner__anchor text-uppercase">projects</a>
+        </li>
+        <li>
+          <a href="#contact" class="banner__anchor text-uppercase">contact</a>
+        </li>
+      </ul>
+      <label for="nav-toggle" class="icon-burger" @click="toggleNavbar">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+      <!-- profile picture -->
+      <img
+        src="../assets/me-black-bg.png"
+        draggable="false"
+        alt="Achraf FAWZI"
+        class="banner__picture"
+      />
+      <!-- intro -->
+      <div class="banner__intro">
+        <div class="intro__name">I'm Achraf FAWZI</div>
+        <div class="intro__title">Web developer</div>
+        <div class="intro__buttons">
+          <a href="#projects" class="intro__viewProjectsBtn">View my work</a>
+          <a href="#contact" class="intro__contactBtn">contact me</a>
+        </div>
       </div>
-    </div>
-    <!-- Social media -->
-    <div class="banner__socialMedia">
-      <a
-        href="https://www.linkedin.com/in/achraf-fawzi-dev/"
-        class="socialMedia__anchors"
-      >
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="https://github.com/Achraffawzi" class="socialMedia__anchors">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="mailto:achraf.fawzi.a@gmail.com" class="socialMedia__anchors">
-        <i class="far fa-envelope"></i>
-      </a>
-      <a
-        href="https://www.instagram.com/itsyealpha/"
-        class="socialMedia__anchors"
-      >
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
+      <!-- Social media -->
+      <div class="banner__socialMedia">
+        <a
+          href="https://www.linkedin.com/in/achraf-fawzi-dev/"
+          class="socialMedia__anchors"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/Achraffawzi" class="socialMedia__anchors">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:achraf.fawzi.a@gmail.com" class="socialMedia__anchors">
+          <i class="far fa-envelope"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/itsyealpha/"
+          class="socialMedia__anchors"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -76,6 +78,45 @@
 <script>
 export default {
   name: "Banner",
+  data() {
+    return {
+      collapsed: false,
+    };
+  },
+  methods: {
+    toggleNavbar() {
+      let navbar = document.querySelector(".banner__ul");
+      let lines = document.querySelectorAll(".line");
+
+      if (this.collapsed) {
+        lines[0].setAttribute(
+          "style",
+          "width: 30px;height: 5px; background: #fff;margin: 5px; transition: all 0.3s ease-in-out;"
+        );
+        lines[1].setAttribute(
+          "style",
+          "width: 30px;height: 5px; background: #fff;margin: 5px; transition: all 0.3s ease-in-out;"
+        );
+        lines[2].setAttribute(
+          "style",
+          "width: 30px;height: 5px; background: #fff;margin: 5px; transition: all 0.3s ease-in-out;"
+        );
+        navbar.style.bottom = "100%";
+
+        this.collapsed = false;
+      } else {
+        lines[0].style.transform = "translateY(10px) rotate(225deg)";
+        lines[1].setAttribute(
+          "style",
+          "opacity:0; -moz-opacity:0; filter:alpha(opacity=0)"
+        );
+        lines[2].style.transform = "translateY(-10px) rotate(-225deg)";
+
+        navbar.style.bottom = "0";
+        this.collapsed = true;
+      }
+    },
+  },
 };
 </script>
 
@@ -143,7 +184,7 @@ export default {
       height: 5px;
       background: #fff;
       margin: 5px;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
   }
 
@@ -255,9 +296,8 @@ export default {
   }
 }
 
-@media screen and (max-width: 540px) { 
-.banner {
-
+@media screen and (max-width: 540px) {
+  .banner {
     &:before {
       content: "";
       width: 100px;
@@ -274,43 +314,47 @@ export default {
 
 @media screen and (max-width: 500px) {
   .icon-burger {
-      display: block !important;
-    }
+    display: block !important;
+  }
 
-    .banner__ul {
-      // display: none !important;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), #252837);
-      position: fixed;
-      top: 0%;
-      left: 0;
-      right: 0;
-      bottom: 100%;
-      width: auto;
-      height: auto;
-      z-index: 3;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      text-align: center;
-      overflow: hidden;
-      transition: all .5s ease-in-out;
-      margin-top: 0;
-    }
+  .banner__ul {
+    // display: none !important;
+    // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), #252837);
+    background-color: $lighter-bg;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    margin-top: 0 !important;
 
-  :checked ~ .banner__ul {
+    .banner__anchor {
+      margin: 0;
+    }
+  }
+
+  .icon-burger:focus .banner__ul {
     bottom: 0;
   }
 
   :checked ~ .icon-burger .line:nth-child(1) {
-		transform: translateY(10px) rotate(225deg);
-	}
-	:checked ~ .icon-burger .line:nth-child(3) {
-		transform: translateY(-10px) rotate(-225deg);
-	}
-	:checked ~ .icon-burger .line:nth-child(2) {
-		opacity: 0;
-	}
-
+    transform: translateY(10px) rotate(225deg);
+  }
+  :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+  :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
 }
 </style>
