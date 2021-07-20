@@ -105,8 +105,6 @@ export default {
 
   .contact__intro {
     margin: 40px 0 10px;
-    width: 820px;
-    max-width: 90vw;
   }
 
   .contact__email {color: $pinkish-color;}

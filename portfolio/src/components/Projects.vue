@@ -116,14 +116,18 @@ export default {
 }
 
 .row-height {
-  height: 247.06px;
-  max-height: 247.06px;
+  // height: 247.06px;
+  // max-height: 247.06px;
 }
 
 .image-col {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    position: relative;
+    max-height: 247.06px;
+    overflow: hidden;
 
     img {
       transition: transform 5s linear;
@@ -131,6 +135,12 @@ export default {
 
     img:hover {
       transform: translateY(calc(247.06px - 100%));
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .projects__title {
+      margin-top: 25px;
     }
   }
 </style>
