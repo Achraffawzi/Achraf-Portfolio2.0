@@ -357,4 +357,25 @@ export default {
     opacity: 0;
   }
 }
+
+@media screen and (max-width: 290px) {
+  .banner {
+    text-align: center;
+
+    .banner__intro {
+      margin-top: 120px;
+    }
+  }
+  .intro__buttons {
+
+    a {
+      display: block;
+
+      &:first-of-type {
+        margin-right: 0px !important;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
 </style>
