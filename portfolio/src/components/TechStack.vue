@@ -2,7 +2,9 @@
   <div class="tech-stack" id="tech-stack">
     <div class="container">
       <h2 class="stack__heading text-uppercase">tech stack</h2>
-      <div class="container stack__icons text-center tech-stack-icons-container">
+      <div
+        class="container stack__icons text-center tech-stack-icons-container"
+      >
         <i class="devicon-html5-plain-wordmark"></i>
         <i class="devicon-css3-plain-wordmark"></i>
         <i class="devicon-bootstrap-plain-wordmark"></i>
@@ -55,7 +57,7 @@ export default {
 
   .tech-stack-icons-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     row-gap: 30px;
   }
 
@@ -69,6 +71,12 @@ export default {
     i[class^="devicon"] {
       font-size: 70px;
     }
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .tech-stack-icons-container {
+    grid-template-columns: 1fr;
   }
 }
 </style>

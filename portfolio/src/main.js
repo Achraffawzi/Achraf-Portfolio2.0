@@ -8,8 +8,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./scss/home/main.scss";
 
-import VueParticles from 'vue-particles'
-Vue.use(VueParticles)
+import VueParticles from "vue-particles";
+Vue.use(VueParticles);
 
 Vue.config.productionTip = false;
 

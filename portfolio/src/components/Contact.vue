@@ -2,68 +2,70 @@
   <div class="contact mt-5c" id="contact">
     <div class="container">
       <h2 class="contact__heading text-uppercase">Contact</h2>
-    <p class="contact__intro">
-      If you like my work, and have a business idea, don’t hesitate to contact
-      me! let’s take your business to the next level.
-    </p>
-    <address class="mb-5">
-      Business Email :
-      <a href="mailto:achraf.fawzi.A@gmail.com" class="contact__email">Achraf.fawzi.a@gmail.com</a>
-    </address>
+      <p class="contact__intro">
+        If you like my work, and have a business idea, don’t hesitate to contact
+        me! let’s take your business to the next level.
+      </p>
+      <address class="mb-5">
+        Business Email :
+        <a href="mailto:achraf.fawzi.A@gmail.com" class="contact__email"
+          >Achraf.fawzi.a@gmail.com</a
+        >
+      </address>
 
-    <form
-      id="gform"
-      method="POST"
-      data-email="from_email@example.com"
-      action="https://script.google.com/macros/s/AKfycbxcLSNwKBCcvyeU0Ls2s2Y_e2mo38wDjbqlfFTB-JCjQlLbdwEKaBi6p8NtG3S3F-ze/exec"
-    >
-      <div class="row">
-        <div class="col-lg-5">
-          <div class="form-group">
-            <label for=""></label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              name="name"
-              placeholder="Fullname"
-              required
-            />
+      <form
+        id="gform"
+        method="POST"
+        data-email="from_email@example.com"
+        action="https://script.google.com/macros/s/AKfycbxcLSNwKBCcvyeU0Ls2s2Y_e2mo38wDjbqlfFTB-JCjQlLbdwEKaBi6p8NtG3S3F-ze/exec"
+      >
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="form-group">
+              <label for=""></label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Fullname"
+                required
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-5">
-          <div class="form-group">
-            <label for=""></label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              name="email"
-              placeholder="Email address"
-              required
-            />
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="form-group">
+              <label for=""></label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-5">
-          <div class="form-group">
-            <label for=""></label>
-            <textarea
-              class="form-control"
-              rows="7"
-              placeholder="Message"
-              name="message"
-              id="message"
-              required
-            ></textarea>
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="form-group">
+              <label for=""></label>
+              <textarea
+                class="form-control"
+                rows="7"
+                placeholder="Message"
+                name="message"
+                id="message"
+                required
+              ></textarea>
+            </div>
           </div>
         </div>
-      </div>
-      <input type="submit" class="button-send my-4" value="Send" />
-    </form>
+        <input type="submit" class="button-send my-4" value="Send" />
+      </form>
     </div>
   </div>
 </template>
@@ -107,19 +109,21 @@ export default {
     margin: 40px 0 10px;
   }
 
-  .contact__email {color: $pinkish-color;}
+  .contact__email {
+    color: $pinkish-color;
+  }
 
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
-      transition: background-color 5000s ease-in-out 0s;
-      -webkit-text-fill-color: $white-color !important;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: $white-color !important;
   }
 
   input,
   textarea {
-        background: rgba(37, 40, 55, 0.7);
+    background: rgba(37, 40, 55, 0.7);
     border: none;
     border-bottom: 1px solid $white-color;
     padding-left: 0;

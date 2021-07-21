@@ -2,36 +2,36 @@
   <div class="footer text-center mb-2">
     <div class="container">
       <!-- Social media -->
-    <div class="footer__socialMedia">
-      <a
-        href="https://www.linkedin.com/in/achraf-fawzi-dev/"
-        class="socialMedia__anchors"
-      >
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="https://github.com/Achraffawzi" class="socialMedia__anchors">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="mailto:achraf.fawzi.a@gmail.com" class="socialMedia__anchors">
-        <i class="far fa-envelope"></i>
-      </a>
-      <a
-        href="https://www.instagram.com/itsyealpha/"
-        class="socialMedia__anchors"
-      >
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-    <!-- copyrights -->
-    <p class="footer__copyrights mt-3">
-      Designed &amp; Built by
-      <a
-        class="font-weight-bold footer__meHighlight"
-        href="https://github.com/Achraffawzi"
-        >Achraf FAWZI</a
-      >
-      &copy; {{ getCopyrightsDate }}
-    </p>
+      <div class="footer__socialMedia">
+        <a
+          href="https://www.linkedin.com/in/achraf-fawzi-dev/"
+          class="socialMedia__anchors"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/Achraffawzi" class="socialMedia__anchors">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:achraf.fawzi.a@gmail.com" class="socialMedia__anchors">
+          <i class="far fa-envelope"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/itsyealpha/"
+          class="socialMedia__anchors"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <!-- copyrights -->
+      <p class="footer__copyrights mt-3">
+        Designed &amp; Built by
+        <a
+          class="font-weight-bold footer__meHighlight"
+          href="https://github.com/Achraffawzi"
+          >Achraf FAWZI</a
+        >
+        &copy; {{ getCopyrightsDate }}
+      </p>
     </div>
   </div>
 </template>
@@ -68,7 +68,7 @@ export default {
   }
 
   .footer__meHighlight {
-      color: $pinkish-color;
-    }
+    color: $pinkish-color;
+  }
 }
 </style>
