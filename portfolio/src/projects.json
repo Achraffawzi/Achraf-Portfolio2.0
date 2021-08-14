@@ -27,6 +27,20 @@
                 "devicon-vuejs-plain-wordmark"
             ],
             "link": "https://github.com/Achraffawzi/Achraf-Portfolio2.0.git"
+        },
+        {
+            "picture": "/assets/mycals.png",
+            "title": "Mycals",
+            "description": "Welcome to MyCals, your number one source for all things nutrition. We're dedicated to providing you the very best of our services that will help you achieve your goals, with an emphasis on learning, tracking and improving your nutrition and eating habits.",
+            "technologies": [
+                "devicon-html5-plain-wordmark",
+                "devicon-css3-plain-wordmark",
+                "devicon-javascript-plain",
+                "devicon-vuejs-plain-wordmark",
+                "devicon-csharp-plain",
+                "devicon-microsoftsqlserver-plain-wordmark"
+            ],
+            "link": "https://github.com/Achraffawzi/mycals-frontend.git"
         }
     ]
 }
